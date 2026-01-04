@@ -10,7 +10,7 @@ class string {
         }
     }
 
-    // check no. is palindrome or not
+    //Q1. check no. is palindrome or not
     public static boolean isPalindrome(String str) {
 
         int n = str.length();
@@ -22,7 +22,7 @@ class string {
         return true;
     }
 
-    // check palindrome using Two - pointer approach
+    //Q2. check palindrome using Two - pointer approach
     public static boolean isPalindromeTwoPointerApp(String str) {
         int start = 0;
         int end = str.length() - 1;
@@ -112,7 +112,6 @@ class string {
     // eg. int a=4; --> we cant convert --> a.toString --> X
     // eg. but Integer a=8; --> can convert --< a.toString --> true we can covert it
     // , beczz Integer is object
-
     public static String stringBuilder() {
         // crete stringBuilder and assign by Empty string
         StringBuilder sb = new StringBuilder("");
@@ -125,7 +124,6 @@ class string {
     }
 
     // Q6. For a given String convert each first letter of each word to Uppercase
-
     public static String toUppercase(String str) {
         StringBuilder sb = new StringBuilder("");
 
@@ -152,6 +150,25 @@ class string {
 
         return sb.toString();
 
+    }
+
+    //Q7. String Compression ---> Amazon 
+    public static String stringCompress(String str){
+
+        StringBuilder newStr = new StringBuilder("");
+
+        for(int i=0; i<str.length();i++){
+
+            char ch=str.charAt(i);
+            int count =0;
+            if(ch==str.charAt(i+1)){
+                count++;
+                i++;
+            }
+        }
+        sb.append
+
+        return newStr.toString();
     }
  
     public static void main(String args[]) {
@@ -196,7 +213,13 @@ class string {
         // System.out.println(stringBuilder());
 
         // Q6-> convert first letter to uppercase 
-        String str="hi! my Name is BALAJI";
-        System.out.println(toUppercase(str));
+        // String str="hi! my Name is BALAJI";
+        // System.out.println(toUppercase(str));
+
+
+        // Q7. String comprressions
+        String str = "aaaabbbccddd";
+        System.out.println(stringCompress(str));
+
     }
 }
