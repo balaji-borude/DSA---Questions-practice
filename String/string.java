@@ -9,7 +9,6 @@ class string {
             System.out.println(name.charAt(i));
         }
     }
-
     //Q1. check no. is palindrome or not
     public static boolean isPalindrome(String str) {
 
@@ -153,28 +152,30 @@ class string {
     }
 
     //Q7. String Compression ---> Amazon 
-    public static String stringCompress(String str){
+    // String str="aaabbcccdd"
+    public static String stringCompression(String str){
 
         StringBuilder newStr = new StringBuilder("");
 
         for(int i=0; i<str.length();i++){
-
-            char ch=str.charAt(i);
-            int count =0;
-            if(ch==str.charAt(i+1)){
+            int count =1;  //start lach count la--> 1 pakadle karan -> 0 pakadlyave ek kami hotoy 
+            while( i<str.length()-1 && str.charAt(i)==str.charAt(i+1) ){
                 count++;
                 i++;
+            };
+
+            newStr.append(str.charAt(i));
+            if(count>1){
+                newStr.append(count);
             }
         }
-        sb.append
-
         return newStr.toString();
     }
  
     public static void main(String args[]) {
         // get the input
         Scanner sc = new Scanner(System.in);
-        // String name = sc.nextLine();
+        //String name = sc.nextLine();
 
         // Q1. print the letters
         // Printletters(name);
@@ -218,8 +219,9 @@ class string {
 
 
         // Q7. String comprressions
-        String str = "aaaabbbccddd";
-        System.out.println(stringCompress(str));
+        String str = "aaaabbbccdddz";
+        System.out.println("Printitg the String --> "+ str);
+        System.out.println(stringCompression(str));
 
     }
 }
