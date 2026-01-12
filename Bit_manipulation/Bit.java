@@ -43,6 +43,14 @@ class Bit{
 
     }
 
+    // set ith bits
+    public static int setIthBit(int n , int i){
+
+        int bitMask = 1<<i;
+        return n | bitMask;
+    }
+
+
     public static void main(String[] args) {
         //Binary AND --> &
         // System.out.println(5&6);
@@ -56,8 +64,14 @@ class Bit{
         //System.out.println(8>>2);
 
         // Ccheck no. is even or odd
-        EvenOrOdd(3);
-        EvenOrOdd(10);
+        // EvenOrOdd(3);
+        // EvenOrOdd(10);
+
+        // Get the ith bits
+        // System.out.println(getIthBit( 3 ,1));
+
+        // set the Ith bits
+        System.out.println(setIthBit(10,3));
 
     }
 }
